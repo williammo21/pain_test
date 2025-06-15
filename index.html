@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Página de Teste de Penetração</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            max-width: 400px;
+        }
+        input, textarea {
+            width: 100%;
+            margin-top: 10px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Página de Teste</h1>
+
+    <form action="processa.php" method="POST">
+        <label for="usuario">Nome de Usuário:</label>
+        <input type="text" name="usuario" id="usuario">
+
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" id="senha">
+
+        <label for="comentario">Comentário:</label>
+        <textarea name="comentario" id="comentario" rows="5"></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <p>Teste XSS: Tente injetar scripts no campo de comentário.</p>
+    <p>Teste SQL Injection: Tente injetar `' OR '1'='1` no campo de usuário/senha.</p>
+
+</body>
+</html>
 
